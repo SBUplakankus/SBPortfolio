@@ -1,0 +1,506 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald',sans-serif;
+}
+.container{
+	scroll-snap-type: y mandatory;	
+}
+
+/* Opening Page */
+
+.banner{
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.10)), url("../images/B4.jpg");
+	background-size: cover;
+	backgroud-position: 0 0;
+	animation: slide 50s linear infinite alternate;
+}
+.navbar{
+	width: 85%;
+	position: relative;
+	z-index: 999;
+	margin: auto;
+	padding: 3vh 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.4vw;
+	font-weight: 200;
+}
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 1vw;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+.navbar ul li a::after{
+	content: '';
+	height: 0.3vh;
+	width: 0%;
+	background: aliceblue;
+	position: absolute;
+	left: 0;
+	bottom: -1vh;
+	transition: 0.5s;
+}
+.navbar ul li a:hover::after{
+	width: 100%
+}
+.intro{
+	font-family: 'Oswald', sans-serif;
+	color: white;
+	font-size: 160%;
+	width: 12vw;
+	cursor: pointer;
+	font-weight: 400;
+}
+.content{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: white;
+}
+button{
+	width: 15vw;
+	padding: 1vw 1vh;
+	text-align: center;
+	margin: 3vh 1vw;
+	border-radius: 2vw;
+	font-weight: 300;
+	font-size: 1.5vw;
+	border: 0.1vw solid white;
+	background: transparent;
+	color: white;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+span{
+	background: rgba(211, 170, 92, 0.87);
+	height: 100%;
+	width: 0%;
+	border-radius: 2vw;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.5s;
+}
+button:hover span{
+	width: 100%;
+}
+.middle{
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../images/Bois.jpg");
+	background-size: cover;
+	backgroud-position: center;
+	scroll-snap-align: start;
+	z-index: -1;
+}
+footer{
+	background-color: black;
+	width: 100%;
+	height: 4%;
+}
+.foot{
+	color: aliceblue;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	padding-top: 0.5vh;
+	padding-bottom: 0.5vh;
+	font-weight: 200;
+	font-size: 0.5vw;
+}
+.foot1{
+	color: aliceblue;
+	font-weight: 200;
+	text-align: center;
+}
+/* NBA 2K Tab Page */
+
+.middle3{
+	height: 130vh;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.10)), url("../images/B4.jpg");
+	background-size: cover;
+	backgroud-position: 0 0;
+	animation: slide 50s linear infinite alternate;
+}
+@keyframes slide{
+	from {background-position: 0 0;}
+	to {background-position: 100% 0;}
+}
+.content2{
+	width: 60vw;
+	height: 110vh;
+	margin-left: 20vw;
+	margin-right: 20vw;
+	margin-top: 15vh;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+.gamenav{
+	width: 60vw;
+	height: 25vh;
+	background-image: url("../images/White1.jpg");
+	margin-bottom: 0.1vh;
+	margin-top: 2vh;
+	margin-left: auto;
+	margin-right: auto;
+	transition: 0.5s;
+}
+.gamenav h3{
+	color: black;
+	margin: 0;
+	font-weight: 600;
+	font-size: 5.5vh;
+	float: left;
+	padding-left: 3vw;
+	padding-right: 5vw;
+}
+.gamenav p{
+	color: black;
+	text-align: left;
+	padding-left: 3vw;
+	margin: 0;
+	font-weight: 200;
+	font-size: 3vh;
+	width: 40%;
+	pointer-events: none;
+}
+.gamenav img{
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  margin: auto;
+	padding-left: 30vw;
+	  max-width: 50%;
+	float: right;
+}
+.gamenav:hover {
+  transform: scale(1.1);
+	transition: 0.5s;
+}
+
+/* Game Page */
+
+.bannervid{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55));
+	background-size: cover;
+	backgroud-position: center;
+}
+.backvideo{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+@media (min-aspect-ratio: 16/9){
+	.backvideo{
+		width: 100%;
+		height: auto;
+	}
+}
+@media (max-aspect-ratio: 16/9){
+	.backvideo{
+		width: auto;
+		height: 100%;
+	}
+}
+.content h1{
+	font-size: 4vw;
+	margin-top: 4vw;
+}
+.content p{
+	margin: 1vh auto;
+	font-weight: 100;
+	line-height: 3vh;
+	font-size: 1.5vw;
+}
+.middle2{
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)), url("../images/White1.jpg");
+	background-size: cover;
+	backgroud-position: center;
+	border-top-style: solid;
+	scroll-snap-align: start;
+	z-index: -1;
+}
+.midbox1{
+	height: 50vh;
+	width: 30%;
+	background-color: transparent;
+	margin-bottom: 25vh;
+	margin-top: 15vh;
+	margin-left: 30vh;
+	margin-right: 1vh;
+	float:left;
+}
+.midbox2{
+	height: 50vh;
+	width: 30%;
+	background-color: transparent;
+	margin-bottom: 25vh;
+	margin-top: 15vh;
+	margin-left: 1vh;
+	margin-right: 30vh;
+	float: right;
+}
+.midboxgame1{
+	height: 40vh;
+	width: 35%;
+	background-color: transparent;
+	margin-bottom: 5vh;
+	margin-top: 7vh;
+	margin-left: 20vh;
+	margin-right: 1vh;
+	float:left;
+}
+.midboxgame2{
+	height: 40vh;
+	width: 35%;
+	background-color: transparent;
+	margin-bottom: 5vh;
+	margin-top: 7vh;
+	margin-left: 1vh;
+	margin-right: 20vh;
+	float:right;
+}
+.midboxgame1 h2{
+	color: black;
+	text-shadow: none;
+	font-weight: 300;
+	margin-left: 1.8vh;
+}
+.midboxgame1 p{
+	color: black;
+	text-shadow: none;
+	font-size: 1.2vw;
+}
+.midboxgame2 h2{
+	color: black;
+	text-shadow: none;
+	font-weight: 300;
+	margin-left: 1.8vh;
+}
+.midboxgame2 p{
+	color: black;
+	text-shadow: none;
+	font-size: 1.2vw;
+}
+.me{
+	color: aliceblue;
+	font-weight: 300;
+	font-size: 3vw;
+	position: relative;
+	margin-left: 1vh;
+	margin-right: auto;
+	margin-top: 2vh;
+	text-align: left;
+	text-shadow: -2px 2px 4px black;
+}
+
+.aboutme{
+	color: aliceblue;
+	font-weight: 200;
+	font-size: 1.2vw;
+	text-align: justify;
+	text-shadow: -2px 2px 4px black;
+	margin-left: 1vh;
+	margin-right: 1vh;
+	margin-top: 2vh;
+	width: 95%;
+}
+.gamemain{
+	text-align: center;
+	height: 90vh;
+	width: 100%
+}
+.gamemain h1{
+	font-size: 8vw;
+	color: aliceblue;
+	font-weight: 500;
+	transition: 0.5s;
+	margin-top: 20vh;
+}
+.gamemain h1:hover{
+	-webkit-text-stroke: 2px aliceblue;
+	color: transparent;
+}
+.gamemain a{
+	text-decoration: none;
+	display: inline-block;
+	color: aliceblue;
+	font-size: 2vw;
+	border: 0.1vw solid aliceblue;
+	padding: 1vw 3vh;
+	border-radius: 3vw;
+	margin-top: 1vh;
+	transition: 0.5s;
+}
+
+.gamemain a:hover{
+	transform: scale(130%);
+	transition: 0.5s;
+}
+.slideshow-box1{
+	display: flex;
+	overflow: hidden;
+	margin-left: 10vw;
+	height: 38vh;
+	width: 35vw;
+	z-index: -1;
+	float: left;
+}
+.slideshow-box2{
+	display: flex;
+	overflow: hidden;
+	margin-right: 10vw;
+	height: 38vh;
+	width: 35vw;
+	float: right;
+}
+.slideshow{
+	display: flex;
+	height: 76vh;
+	width: 70vw;
+	animation: slideshow 25s linear infinite;
+	transition: transform 0.5s ease-in-out;
+}
+.slidepic{
+	flex: 1 0 0;
+}
+.slidepic img{
+	height: 38vh;
+	width: 35vw;
+	object-fit: cover;
+}
+@keyframes slideshow {
+  0% {
+    transform: translateX(0);
+  }
+  18% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(-35vw);
+  }
+  38% {
+    transform: translateX(-35vw);
+  }
+  40% {
+    transform: translateX(-70vw);
+  }
+  58% {
+    transform: translateX(-70vw);
+  }	
+	 60% {
+    transform: translateX(-105vw);
+  }
+  78% {
+    transform: translateX(-105vw);
+  }
+  80% {
+    transform: translateX(-140vw);
+  }
+  98% {
+    transform: translateX(-140vw);
+  }	
+	100% {
+    transform: translateX(-175vw);
+  }	
+}
+
+/* Info Page */
+
+.info{
+	width: 40vw;
+	height: 25vh;
+	margin-bottom: 0.1vh;
+	margin-top: 2vh;
+	margin-left: -10vw;
+	margin-right: auto;
+	float: left;
+}
+.info h3{
+	color: rgba(211, 170, 92, 0.87);
+	margin: 0;
+	font-weight: 600;
+	font-size: 5.5vh;
+	float: left;
+	padding-right: 23.5vw;
+}
+.info p{
+	color: white;
+	text-align: justify;
+	margin: 0;
+	font-weight: 200;
+	font-size: 3vh;
+	width: 100%;
+	pointer-events: none;
+	padding-top: 5vh;
+}
+
+.rightimg{
+	position: absolute;
+	top: 26vh;
+	right: 7vw;
+	height: 45vh;
+	width: 35vw;
+	background-size: cover;
+	backgroud-position: 0 0;
+}
+.middle4{
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.10)), url("../images/B4.jpg");
+	background-size: cover;
+	backgroud-position: 0 0;
+	animation: slide 50s linear infinite alternate;
+}
+.content3{
+	width: 60vw;
+	height: 80vh;
+	margin-left: 20vw;
+	margin-right: 20vw;
+	margin-top: 15vh;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+.button2{
+	width: 25vw;
+	padding: 1vw 1vh;
+	text-align: center;
+	margin: 3vh 1vw;
+	border-radius: 2vw;
+	font-weight: 300;
+	font-size: 2vw;
+	border: 0.1vw solid white;
+	background: transparent;
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	overflow: hidden;
+	top: 73vh;
+	right: 10vw;
+	z-index: 3;
+}
+.button2:hover span{
+	width: 100%;
+}
